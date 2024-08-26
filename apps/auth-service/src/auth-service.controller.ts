@@ -1,12 +1,19 @@
-import { Controller, Get } from '@nestjs/common';
-import { AuthServiceService } from './auth-service.service';
+import { Controller, Post, Body, UnauthorizedException } from '@nestjs/common';
+import { AuthService } from './auth-service.service';
 
-@Controller()
-export class AuthServiceController {
-  constructor(private readonly authServiceService: AuthServiceService) {}
+@Controller('auth')
+export class AuthController {
+  constructor(private authService: AuthService) { }
 
-  @Get()
-  getHello(): string {
-    return this.authServiceService.getHello();
+  @Post('login')
+  async login(@Body() loginDto: { username: string; password: string }) {
+    const user = await this.authService.validateUser(
+      loginDto.username,
+      loginDto.password,
+    );
+    if (!user) {
+      throw new UnauthorizedException();
+    }
+    return this.authService.login(user);
   }
 }
