@@ -9,7 +9,7 @@ import { JwtStrategy } from './jwt.strategy';
   imports: [
     PassportModule,
     JwtModule.register({
-      secret: 'your-secret-key', // Use environment variable in production
+      secret: 'your-secret-key',
       signOptions: { expiresIn: '60m' },
     }),
   ],
