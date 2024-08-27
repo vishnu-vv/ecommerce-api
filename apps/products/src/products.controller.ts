@@ -1,12 +1,24 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, UseGuards } from '@nestjs/common';
 import { ProductsService } from './products.service';
+import { JwtStrategy } from 'apps/auth/src/jwt.strategy';
 
-@Controller()
+@Controller('products')
 export class ProductsController {
-  constructor(private readonly productsService: ProductsService) {}
+  constructor(private productsService: ProductsService) {}
 
   @Get()
-  getHello(): string {
-    return this.productsService.getHello();
+  findAll() {
+    return this.productsService.findAll();
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.productsService.findOne(+id);
+  }
+
+  @Post()
+  @UseGuards(JwtStrategy)
+  create(@Body() createProductDto: { name: string; price: number }) {
+    return this.productsService.create(createProductDto);
   }
 }
