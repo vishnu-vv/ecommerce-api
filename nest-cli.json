@@ -19,31 +19,13 @@
         "tsConfigPath": "apps/ecommerce-api/tsconfig.app.json"
       }
     },
-    "auth-service": {
+    "auth": {
       "type": "application",
-      "root": "apps/auth-service",
+      "root": "apps/auth",
       "entryFile": "main",
-      "sourceRoot": "apps/auth-service/src",
+      "sourceRoot": "apps/auth/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/auth-service/tsconfig.app.json"
-      }
-    },
-    "product-service": {
-      "type": "application",
-      "root": "apps/product-service",
-      "entryFile": "main",
-      "sourceRoot": "apps/product-service/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/product-service/tsconfig.app.json"
-      }
-    },
-    "order-service": {
-      "type": "application",
-      "root": "apps/order-service",
-      "entryFile": "main",
-      "sourceRoot": "apps/order-service/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/order-service/tsconfig.app.json"
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
       }
     },
     "common": {
@@ -62,6 +44,24 @@
       "sourceRoot": "libs/database/src",
       "compilerOptions": {
         "tsConfigPath": "libs/database/tsconfig.lib.json"
+      }
+    },
+    "order": {
+      "type": "application",
+      "root": "apps/order",
+      "entryFile": "main",
+      "sourceRoot": "apps/order/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/order/tsconfig.app.json"
+      }
+    },
+    "product": {
+      "type": "application",
+      "root": "apps/product",
+      "entryFile": "main",
+      "sourceRoot": "apps/product/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/product/tsconfig.app.json"
       }
     }
   }
