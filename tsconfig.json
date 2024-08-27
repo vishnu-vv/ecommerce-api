@@ -18,10 +18,18 @@
     "forceConsistentCasingInFileNames": false,
     "noFallthroughCasesInSwitch": false,
     "paths": {
-      "@common": ["libs/common/src"],
-      "@common/*": ["libs/common/src/*"],
-      "@database": ["libs/database/src"],
-      "@database/*": ["libs/database/src/*"]
+      "@common": [
+        "libs/common/src"
+      ],
+      "@common/*": [
+        "libs/common/src/*"
+      ],
+      "@database": [
+        "libs/database/src"
+      ],
+      "@database/*": [
+        "libs/database/src/*"
+      ]
     }
   }
 }
