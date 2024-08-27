@@ -46,22 +46,22 @@
         "tsConfigPath": "libs/database/tsconfig.lib.json"
       }
     },
-    "order": {
+    "products": {
       "type": "application",
-      "root": "apps/order",
+      "root": "apps/products",
       "entryFile": "main",
-      "sourceRoot": "apps/order/src",
+      "sourceRoot": "apps/products/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/order/tsconfig.app.json"
+        "tsConfigPath": "apps/products/tsconfig.app.json"
       }
     },
-    "product": {
+    "orders": {
       "type": "application",
-      "root": "apps/product",
+      "root": "apps/orders",
       "entryFile": "main",
-      "sourceRoot": "apps/product/src",
+      "sourceRoot": "apps/orders/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/product/tsconfig.app.json"
+        "tsConfigPath": "apps/orders/tsconfig.app.json"
       }
     }
   }
